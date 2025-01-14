@@ -49,7 +49,7 @@ void _showEmailVerificationModal(BuildContext context) {
                       maxLength: 1,
                       decoration: InputDecoration(
                         counterText: "",
-                        border: OutlineInputBorder(),
+                        border: UnderlineInputBorder(),
                       ),
                     ),
                   ),

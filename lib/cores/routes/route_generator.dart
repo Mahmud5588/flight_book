@@ -1,5 +1,6 @@
 import 'package:exam/cores/routes/route_names.dart';
 import 'package:exam/features/account/screens/settings/confrimyourpin.dart';
+import 'package:exam/features/account/screens/settings/delete_account.dart';
 import 'package:exam/features/account/screens/settings/email_number.dart';
 import 'package:exam/features/account/screens/settings/language.dart';
 import 'package:exam/features/account/screens/settings/notifications.dart';
@@ -44,6 +45,8 @@ class AppRoute {
         return MaterialPageRoute(builder: (_) => const ConfirmYourPin());
       case RouteNames.setPinPage:
         return MaterialPageRoute(builder: (_) => SetPinPage());
+      case RouteNames.deleteAccount:
+        return MaterialPageRoute(builder: (_) => const DeleteAccount());
       default:
         return _errorRoute();
     }

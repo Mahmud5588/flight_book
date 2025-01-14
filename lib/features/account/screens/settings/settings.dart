@@ -17,8 +17,11 @@ class _SettingsState extends State<Settings> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,
-        leading: const Icon(
-          Icons.arrow_back,
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pop(context);
+          },
           color: Colors.black,
         ),
       ),
@@ -110,10 +113,13 @@ class _SettingsState extends State<Settings> {
                 Navigator.pushNamed(context, RouteNames.securitySetting);
               },
             ),
-            const ContainerGesture(
-              icons: Icon(null),
-              text: Text("Delete Account"),
-              element: Icon(Icons.navigate_next),
+            ContainerGesture(
+              icons: const Icon(null),
+              text: const Text("Delete Account"),
+              element: const Icon(Icons.navigate_next),
+              onTap: () {
+                Navigator.pushNamed(context, RouteNames.deleteAccount);
+              },
             ),
             const Padding(
               padding: EdgeInsets.only(left: 20.0, right: 20),

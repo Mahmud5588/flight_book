@@ -12,9 +12,6 @@ class SignIn extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      // appBar: AppBar(
-      //   leading: const Icon(Icons.arrow_back),
-      // ),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(16.0),
@@ -54,7 +51,7 @@ class SignIn extends StatelessWidget {
               MyElevatedButton(
                 text: "Sign In",
                 onPressed: () {
-                  Navigator.pushNamed(context, RouteNames.homePage);
+                  Navigator.pushNamed(context, RouteNames.bottomNavBar);
                 },
                 icon: const Icon(
                   Icons.check_circle,

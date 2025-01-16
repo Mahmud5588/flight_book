@@ -41,10 +41,10 @@ class _HomepageState extends State<Homepage> {
           ),
         ),
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            Column(
+      body: Column(
+        children: [
+          SingleChildScrollView(
+            child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const Padding(
@@ -121,8 +121,8 @@ class _HomepageState extends State<Homepage> {
                 ),
               ],
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

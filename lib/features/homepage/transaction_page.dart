@@ -1,3 +1,5 @@
+import 'package:exam/cores/routes/route_names.dart';
+
 import 'trancaction_details_page.dart';
 import 'package:flutter/material.dart';
 
@@ -63,9 +65,9 @@ class TransactionPage extends StatelessWidget {
                 width: double.infinity, // Tugmani butun kenglikka cho'zadi
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigator.pushReplacement(
+                    Navigator.pushNamed(
                       context,
-                      MaterialPageRoute(builder: (context) => const TransactionDetails()),
+                      RouteNames.transactionDetail
                     );
                   },
                   child: Text(

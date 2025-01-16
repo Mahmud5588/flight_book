@@ -15,4 +15,5 @@ class RouteNames {
   static const String paymentDetails = "/paymentDetails";
   static const String splashPage = "/splashPage";
   static const String searchFlightSection = "/searchFlightSection";
+  static const String transactionDetail = "/transactionDetail";
 }

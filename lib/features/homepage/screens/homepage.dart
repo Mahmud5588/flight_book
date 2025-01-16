@@ -1,3 +1,4 @@
+import 'package:exam/cores/routes/route_names.dart';
 import 'package:exam/features/homepage/data_widget/select_date_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -134,7 +135,7 @@ class _HomePageState extends State<Homepage> {
                       const SizedBox(height: 30),
                       ElevatedButton(
                         onPressed: () {
-                          // Action when "Search flights" button is pressed
+                          Navigator.pushNamed(context, RouteNames.searchFlightSection);
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.blue,

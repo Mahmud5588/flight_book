@@ -1,5 +1,6 @@
 import 'package:exam/features/account/screens/account.dart';
 import 'package:exam/features/homepage/screens/homepage.dart';
+import 'package:exam/features/homepage/trancaction_details_page.dart';
 import 'package:exam/features/transaction/screens/transactions.dart';
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';

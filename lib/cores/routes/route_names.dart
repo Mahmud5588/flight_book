@@ -12,4 +12,5 @@ class RouteNames {
   static const String confirmYourPin = "/confirmYourPin";
   static const String setPinPage = "/setPinPage";
   static const String deleteAccount = "/deleteAccount";
+  static const String paymentDetails = "/paymentDetails";
 }

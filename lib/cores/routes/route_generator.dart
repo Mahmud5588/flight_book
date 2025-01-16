@@ -12,6 +12,7 @@ import 'package:exam/features/authentications/screens/sign_in.dart';
 import 'package:exam/features/authentications/screens/sign_up.dart';
 import 'package:exam/features/homepage/screens/bottomnavbar.dart';
 import 'package:exam/features/homepage/screens/homepage.dart';
+import 'package:exam/payment_details.dart';
 import 'package:flutter/material.dart';
 
 class AppRoute {
@@ -47,6 +48,8 @@ class AppRoute {
         return MaterialPageRoute(builder: (_) => SetPinPage());
       case RouteNames.deleteAccount:
         return MaterialPageRoute(builder: (_) => const DeleteAccount());
+      case RouteNames.paymentDetails:
+        return MaterialPageRoute(builder: (_) => const PaymentDetails());
       default:
         return _errorRoute();
     }

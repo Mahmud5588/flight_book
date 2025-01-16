@@ -1,4 +1,3 @@
-import 'package:exam/features/homepage/screens/bottomnavbar.dart';
 import 'package:exam/features/homepage/screens/homepage.dart';
 import 'package:exam/features/homepage/widget/contact/contact_details.dart';
 import 'package:exam/features/homepage/widget/search_flight_widget.dart';
@@ -18,7 +17,7 @@ class SearchFlightsPage extends StatelessWidget {
           onPressed: () {
             Navigator.pushReplacement(
               context,
-              MaterialPageRoute(builder: (context) => const BottomNavbar()), // HomePage sahifasiga o'tish
+              MaterialPageRoute(builder: (context) => const Homepage()), // HomePage sahifasiga o'tish
             );
           },
         ),

@@ -14,6 +14,6 @@ class RouteNames {
   static const String deleteAccount = "/deleteAccount";
   static const String paymentDetails = "/paymentDetails";
   static const String splashPage = "/splashPage";
-  static const String searchFlightSection = "/searchFlightSection";
+  static const String searchFlightPage = "/searchFlightPage";
   static const String transactionDetail = "/transactionDetail";
 }

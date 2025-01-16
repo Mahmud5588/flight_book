@@ -15,117 +15,121 @@ class SignIn extends StatelessWidget {
       // appBar: AppBar(
       //   leading: const Icon(Icons.arrow_back),
       // ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Text(
-              "Sign In",
-              style: TextStyle(
-                color: Color(0xff0d1634),
-                fontSize: 40,
-                fontWeight: FontWeight.w500,
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const Text(
+                "Sign In",
+                style: TextStyle(
+                  color: Color(0xff0d1634),
+                  fontSize: 40,
+                  fontWeight: FontWeight.w500,
+                ),
               ),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            const Text(
-              "Start Your Journey with affordable price",
-              style: TextStyle(
-                fontSize: 14,
-                fontWeight: FontWeight.w500,
+              const SizedBox(
+                height: 20,
               ),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            MyTextField(text: "Enter your email", labelText: "Email"),
-            const SizedBox(
-              height: 20,
-            ),
-            MyTextField(text: "Enter your password", labelText: "password"),
-            const SizedBox(
-              height: 20,
-            ),
-            MyElevatedButton(
-              text: "Sign In",
-              onPressed: () {},
-              icon: const Icon(
-                Icons.check_circle,
-                color: Colors.white,
+              const Text(
+                "Start Your Journey with affordable price",
+                style: TextStyle(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w500,
+                ),
               ),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            const Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Text(
-                  "Or Sign In with",
-                  style: TextStyle(
-                    fontSize: 14,
-                    fontWeight: FontWeight.w500,
-                  ),
+              const SizedBox(
+                height: 20,
+              ),
+              MyTextField(text: "Enter your email", labelText: "Email"),
+              const SizedBox(
+                height: 20,
+              ),
+              MyTextField(text: "Enter your password", labelText: "password"),
+              const SizedBox(
+                height: 20,
+              ),
+              MyElevatedButton(
+                text: "Sign In",
+                onPressed: () {
+                  Navigator.pushNamed(context, RouteNames.homePage);
+                },
+                icon: const Icon(
+                  Icons.check_circle,
+                  color: Colors.white,
                 ),
-              ],
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Button(
-                  onPressed: () {},
-                  icon: const Icon(
-                    Icons.facebook,
-                    color: Colors.black,
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Text(
+                    "Or Sign In with",
+                    style: TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w500,
+                    ),
                   ),
-                ),
-                Button(
-                  onPressed: () {},
-                  icon: Icon(
-                    MdiIcons.google,
-                    color: Colors.black,
+                ],
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Button(
+                    onPressed: () {},
+                    icon: const Icon(
+                      Icons.facebook,
+                      color: Colors.black,
+                    ),
                   ),
-                ),
-                Button(
-                  onPressed: () {},
-                  icon: const Icon(
-                    Icons.apple,
-                    color: Colors.black,
+                  Button(
+                    onPressed: () {},
+                    icon: Icon(
+                      MdiIcons.google,
+                      color: Colors.black,
+                    ),
                   ),
-                )
-              ],
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                const Text(
-                  "Don't have  an account ",
-                  style: TextStyle(
-                    fontSize: 14,
-                    fontWeight: FontWeight.w500,
+                  Button(
+                    onPressed: () {},
+                    icon: const Icon(
+                      Icons.apple,
+                      color: Colors.black,
+                    ),
+                  )
+                ],
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  const Text(
+                    "Don't have  an account ",
+                    style: TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w500,
+                    ),
                   ),
-                ),
-                TextButton(
-                    onPressed: () {
-                      Navigator.pushNamed(context, RouteNames.signUp);
-                    },
-                    child: const Text("Sign Up"))
-              ],
-            ),
-          ],
+                  TextButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, RouteNames.signUp);
+                      },
+                      child: const Text("Sign Up"))
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );

@@ -1,4 +1,4 @@
-import 'package:exam/features/homepage/widgets/select_date_widget.dart';
+import 'package:exam/features/homepage/data_widget/select_date_widget.dart';
 import 'package:flutter/material.dart';
 
 class Homepage extends StatefulWidget {
@@ -131,7 +131,7 @@ class _HomePageState extends State<Homepage> {
                       const SizedBox(height: 15),
                       _buildEditableTextField(
                           'Travelers', Icons.person, travelersController),
-                      const SizedBox(height: 90),
+                      const SizedBox(height: 30),
                       ElevatedButton(
                         onPressed: () {
                           // Action when "Search flights" button is pressed

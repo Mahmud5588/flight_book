@@ -13,4 +13,5 @@ class RouteNames {
   static const String setPinPage = "/setPinPage";
   static const String deleteAccount = "/deleteAccount";
   static const String paymentDetails = "/paymentDetails";
+  static const String splashPage = "/splashPage";
 }

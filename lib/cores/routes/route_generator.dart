@@ -12,6 +12,7 @@ import 'package:exam/features/authentications/screens/sign_in.dart';
 import 'package:exam/features/authentications/screens/sign_up.dart';
 import 'package:exam/features/homepage/screens/bottomnavbar.dart';
 import 'package:exam/features/homepage/screens/homepage.dart';
+import 'package:exam/features/into/splash_page.dart';
 import 'package:exam/payment_details.dart';
 import 'package:flutter/material.dart';
 
@@ -23,7 +24,7 @@ class AppRoute {
   Route onGenerateRoute(RouteSettings routeSettings) {
     switch (routeSettings.name) {
       case RouteNames.onBoarding:
-        return MaterialPageRoute(builder: (_) => const OnboardingScreen());
+        return MaterialPageRoute(builder: (_) => const InfoPage());
       case RouteNames.signIn:
         return MaterialPageRoute(builder: (_) => const SignIn());
       case RouteNames.signUp:
@@ -50,6 +51,8 @@ class AppRoute {
         return MaterialPageRoute(builder: (_) => const DeleteAccount());
       case RouteNames.paymentDetails:
         return MaterialPageRoute(builder: (_) => const PaymentDetails());
+      case RouteNames.splashPage:
+        return MaterialPageRoute(builder: (_) => SplashScreen());
       default:
         return _errorRoute();
     }

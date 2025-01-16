@@ -112,7 +112,7 @@ class _HomepageState extends State<Homepage> {
                             icon: const Icon(null),
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 20,
                         )
                       ],

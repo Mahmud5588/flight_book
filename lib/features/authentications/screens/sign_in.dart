@@ -54,7 +54,7 @@ class SignIn extends StatelessWidget {
               MyElevatedButton(
                 text: "Sign In",
                 onPressed: () {
-                  Navigator.pushNamed(context, RouteNames.homePage);
+                  Navigator.pushNamed(context, RouteNames.bottomNavBar);
                 },
                 icon: const Icon(
                   Icons.check_circle,

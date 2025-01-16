@@ -12,7 +12,7 @@ import 'package:exam/features/authentications/screens/sign_in.dart';
 import 'package:exam/features/authentications/screens/sign_up.dart';
 import 'package:exam/features/homepage/screens/bottomnavbar.dart';
 import 'package:exam/features/homepage/screens/homepage.dart';
-import 'package:exam/features/homepage/widget/search_flights_section.dart';
+import 'package:exam/features/homepage/widget/contact/flight_searche_page.dart';
 import 'package:exam/features/into/splash_page.dart';
 import 'package:exam/payment_details.dart';
 import 'package:flutter/material.dart';
@@ -54,8 +54,8 @@ class AppRoute {
         return MaterialPageRoute(builder: (_) => const PaymentDetails());
       case RouteNames.splashPage:
         return MaterialPageRoute(builder: (_) => SplashScreen());
-      case RouteNames.searchFlightSection:
-        return MaterialPageRoute(builder: (_) => const SearchFlightsSection());
+      case RouteNames.searchFlightPage:
+        return MaterialPageRoute(builder: (_) => const SearchFlightsPage());
       default:
         return _errorRoute();
     }

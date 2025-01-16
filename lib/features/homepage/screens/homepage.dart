@@ -41,10 +41,10 @@ class _HomepageState extends State<Homepage> {
           ),
         ),
       ),
-      body: Column(
-        children: [
-          SingleChildScrollView(
-            child: Column(
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const Padding(
@@ -107,12 +107,12 @@ class _HomepageState extends State<Homepage> {
                             text: "Search Flights",
                             onPressed: () {
                               Navigator.pushNamed(
-                                  context, RouteNames.searchFlightSection);
+                                  context, RouteNames.searchFlightPage);
                             },
                             icon: const Icon(null),
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 20,
                         )
                       ],
@@ -121,8 +121,8 @@ class _HomepageState extends State<Homepage> {
                 ),
               ],
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

@@ -1,6 +1,4 @@
 import 'package:exam/cores/routes/route_names.dart';
-
-import 'trancaction_details_page.dart';
 import 'package:flutter/material.dart';
 
 class TransactionPage extends StatelessWidget {
@@ -28,7 +26,8 @@ class TransactionPage extends StatelessWidget {
             ),
             SizedBox(height: 20),
             Center(
-              child: Image.asset('assets/images/transaction.png'), // Rasimni joylash uchun
+              child: Image.asset(
+                  'assets/images/transaction.png'), // Rasimni joylash uchun
             ),
             SizedBox(height: 60),
             Center(
@@ -65,20 +64,19 @@ class TransactionPage extends StatelessWidget {
                 width: double.infinity, // Tugmani butun kenglikka cho'zadi
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigator.pushNamed(
-                      context,
-                      RouteNames.transactionDetail
-                    );
+                    Navigator.pushNamed(context, RouteNames.transactionDetail);
                   },
                   child: Text(
                     'Book a trip',
-                    textAlign: TextAlign.center, // Matnni markazga joylashtirish
-                    style: TextStyle(fontSize: 16,color: Colors.white),
+                    textAlign:
+                        TextAlign.center, // Matnni markazga joylashtirish
+                    style: TextStyle(fontSize: 16, color: Colors.white),
                   ),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.blue, // Tugma rangi
                     padding: EdgeInsets.symmetric(horizontal: 42, vertical: 16),
-                    shape: RoundedRectangleBorder( // Tugmani chetlarini yumaloqlashtirish
+                    shape: RoundedRectangleBorder(
+                      // Tugmani chetlarini yumaloqlashtirish
                       borderRadius: BorderRadius.circular(8),
                     ),
                   ),

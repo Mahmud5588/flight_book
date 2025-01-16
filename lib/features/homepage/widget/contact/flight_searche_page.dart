@@ -17,9 +17,7 @@ class SearchFlightsPage extends StatelessWidget {
           onPressed: () {
             Navigator.pushReplacement(
               context,
-              MaterialPageRoute(
-                  builder: (context) =>
-                      const Homepage()), // HomePage sahifasiga o'tish
+              MaterialPageRoute(builder: (context) => const Homepage()), // HomePage sahifasiga o'tish
             );
           },
         ),
@@ -31,6 +29,7 @@ class SearchFlightsPage extends StatelessWidget {
         toolbarHeight: 70,
         backgroundColor: Colors.blue,
       ),
+
       body: Container(
         width: double.infinity,
         decoration: const BoxDecoration(

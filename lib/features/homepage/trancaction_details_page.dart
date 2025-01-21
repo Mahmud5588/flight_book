@@ -1,4 +1,5 @@
 import 'package:exam/cores/routes/route_names.dart';
+import 'package:exam/features/homepage/screens/bottomnavbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -19,7 +20,10 @@ class _TransactionDetailsState extends State<TransactionDetails> {
         leading: IconButton(
           icon: Icon(Icons.arrow_back_ios),
           onPressed: () {
-            Navigator.of(context).pop();
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(builder: (context) => const BottomNavbar()), // HomePage sahifasiga o'tish
+            );
           },
         ),
       ),

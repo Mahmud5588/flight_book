@@ -3,7 +3,7 @@ import 'package:exam/features/homepage/widget/contact/contact_person_detail.dart
 import 'package:exam/features/homepage/widget/contact/select_seat/select_seat.dart';
 import 'package:flutter/material.dart';
 
-class ContactDetailsPage extends StatelessWidget {
+class ContactDetailsPages extends StatelessWidget {
   final TextEditingController dateController = TextEditingController();
 
   @override

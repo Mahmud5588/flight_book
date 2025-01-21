@@ -50,7 +50,7 @@ class SearchFlightsPage extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => ContactDetailsPage(),
+                        builder: (context) => ContactDetailsPages(),
                       ),
                     );
                   },
@@ -82,7 +82,7 @@ class SearchFlightsPage extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => ContactDetailsPage(),
+                        builder: (context) => ContactDetailsPages(),
                       ),
                     );
                   },
@@ -114,7 +114,7 @@ class SearchFlightsPage extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => ContactDetailsPage(),
+                        builder: (context) => ContactDetailsPages(),
                       ),
                     );
                   },

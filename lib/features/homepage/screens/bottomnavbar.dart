@@ -16,7 +16,7 @@ class _BottomNavbarState extends State<BottomNavbar> {
   int _currentIndex = 0;
   List<Widget> pages = [
     const Homepage(),
-    const Transactions(),
+    const TransactionDetails(),
     const Account(),
   ];
 

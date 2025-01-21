@@ -1,3 +1,4 @@
+import 'package:exam/features/homepage/widget/contact/contact_details.dart';
 import 'package:flutter/material.dart';
 
 class ContactDetailsPage extends StatefulWidget {
@@ -10,7 +11,7 @@ class _ContactDetailsPageState extends State<ContactDetailsPage> {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _phoneController = TextEditingController();
   final TextEditingController _idController = TextEditingController();
-  bool _isMale = true;
+  bool _isMales = true;
 
   @override
   void dispose() {
@@ -25,9 +26,8 @@ class _ContactDetailsPageState extends State<ContactDetailsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Contact Person Details'),
         leading: IconButton(
-          icon: Icon(Icons.arrow_back),
+          icon: Icon(Icons.arrow_back_ios_new),
           onPressed: () => Navigator.of(context).pop(),
         ),
       ),
@@ -35,29 +35,33 @@ class _ContactDetailsPageState extends State<ContactDetailsPage> {
         padding: const EdgeInsets.all(16),
         child: Column(
           children: [
-            ListTile(
-              title: Text('Male'),
-              leading: Radio(
-                value: true,
-                groupValue: _isMale,
-                onChanged: (bool? value) {
-                  setState(() {
-                    _isMale = value!;
-                  });
-                },
-              ),
+            Row(
+              children: [
+                Text(
+                  "Contact Person Details",
+                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                ),
+              ],
             ),
-            ListTile(
-              title: Text('Female'),
-              leading: Radio(
-                value: false,
-                groupValue: _isMale,
-                onChanged: (bool? value) {
-                  setState(() {
-                    _isMale = value!;
-                  });
-                },
-              ),
+            Row(
+              children: [
+                Expanded(
+                  child: RadioListTile<bool>(
+                    title: const Text('Male'),
+                    value: true,
+                    groupValue: _isMales,
+                    onChanged: (value) {},
+                  ),
+                ),
+                Expanded(
+                  child: RadioListTile<bool>(
+                    title: const Text('Female'),
+                    value: false,
+                    groupValue: _isMales,
+                    onChanged: (value) {},
+                  ),
+                ),
+              ],
             ),
             TextField(
               controller: _fullNameController,
@@ -114,7 +118,7 @@ class PassengerInfoPage extends StatelessWidget {
           onPressed: () {
             Navigator.pushReplacement(
               context,
-              MaterialPageRoute(builder: (context) => ContactDetailsPage()), // HomePage sahifasiga o'tish
+              MaterialPageRoute(builder: (context) => ContactDetailsPages()), // HomePage sahifasiga o'tish
             );
           }
         ),

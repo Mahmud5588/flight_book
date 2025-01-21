@@ -1,3 +1,5 @@
+import 'package:exam/features/authentications/screens/onBoarding.dart';
+import 'package:exam/features/authentications/screens/sign_in.dart';
 import 'package:flutter/material.dart';
 
 class DeleteAccount extends StatefulWidget {
@@ -102,7 +104,12 @@ class _DeleteAccountState extends State<DeleteAccount> {
               width: double.infinity,
               child: ElevatedButton(
                 onPressed: () {
-                  _isChecked ? () {} : null;
+                  _isChecked ? () {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(builder: (context) => const SignIn()),
+                    );
+                  } : null;
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: _isChecked ? Colors.blue : Colors.blue[200],

@@ -41,88 +41,90 @@ class _HomepageState extends State<Homepage> {
           ),
         ),
       ),
-      body: Column(
-        children: [
-          SingleChildScrollView(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const Padding(
-                  padding: EdgeInsets.all(16.0),
-                  child: SizedBox(
-                    width: 250,
-                    child: Text(
-                      "Discover a new world",
-                      style: TextStyle(
-                        fontWeight: FontWeight.w700,
-                        fontSize: 34,
-                        color: Colors.white,
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Padding(
+                    padding: EdgeInsets.all(16.0),
+                    child: SizedBox(
+                      width: 250,
+                      child: Text(
+                        "Discover a new world",
+                        style: TextStyle(
+                          fontWeight: FontWeight.w700,
+                          fontSize: 34,
+                          color: Colors.white,
+                        ),
                       ),
                     ),
                   ),
-                ),
-                Container(
-                  decoration: const BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(16),
-                      topRight: Radius.circular(16),
+                  Container(
+                    decoration: const BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(16),
+                        topRight: Radius.circular(16),
+                      ),
                     ),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(16.0),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const CustomRadioWidget(
-                            options: ["One-way", "Round-trip"]),
-                        const SizedBox(height: 8),
-                        TextFieldHomePage(
-                          title: const Text("From"),
-                          icon: const Icon(Icons.flight_takeoff),
-                          controller: fromController,
-                        ),
-                        TextFieldHomePage(
-                          title: const Text("To"),
-                          icon: const Icon(Icons.flight_land),
-                          controller: toController,
-                          image: const AssetImage("assets/images/change.png"),
-                        ),
-                        TextFieldHomePage(
-                          title: const Text("Departure date"),
-                          icon: const Icon(Icons.date_range),
-                          controller: dateController,
-                          isDateField: true, // Specify this as a date field
-                        ),
-                        TextFieldHomePage(
-                          title: const Text("Travelers"),
-                          icon: const Icon(Icons.person),
-                          controller: travelersController,
-                        ),
-                        const SizedBox(height: 8),
-                        SizedBox(
-                          width: double.infinity,
-                          child: MyElevatedButton(
-                            text: "Search Flights",
-                            onPressed: () {
-                              Navigator.pushNamed(
-                                  context, RouteNames.searchFlightPage);
-                            },
-                            icon: const Icon(null),
+                    child: Padding(
+                      padding: const EdgeInsets.all(16.0),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const CustomRadioWidget(
+                              options: ["One-way", "Round-trip"]),
+                          const SizedBox(height: 8),
+                          TextFieldHomePage(
+                            title: const Text("From"),
+                            icon: const Icon(Icons.flight_takeoff),
+                            controller: fromController,
                           ),
-                        ),
-                        const SizedBox(
-                          height: 20,
-                        )
-                      ],
+                          TextFieldHomePage(
+                            title: const Text("To"),
+                            icon: const Icon(Icons.flight_land),
+                            controller: toController,
+                            image: const AssetImage("assets/images/change.png"),
+                          ),
+                          TextFieldHomePage(
+                            title: const Text("Departure date"),
+                            icon: const Icon(Icons.date_range),
+                            controller: dateController,
+                            isDateField: true, // Specify this as a date field
+                          ),
+                          TextFieldHomePage(
+                            title: const Text("Travelers"),
+                            icon: const Icon(Icons.person),
+                            controller: travelersController,
+                          ),
+                          const SizedBox(height: 8),
+                          SizedBox(
+                            width: double.infinity,
+                            child: MyElevatedButton(
+                              text: "Search Flights",
+                              onPressed: () {
+                                Navigator.pushNamed(
+                                    context, RouteNames.searchFlightPage);
+                              },
+                              icon: const Icon(null),
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 20,
+                          )
+                        ],
+                      ),
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

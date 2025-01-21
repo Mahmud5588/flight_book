@@ -65,9 +65,9 @@ class TransactionPage extends StatelessWidget {
                 width: double.infinity, // Tugmani butun kenglikka cho'zadi
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigator.pushNamed(
+                    Navigator.push(
                       context,
-                      RouteNames.transactionDetail
+                      MaterialPageRoute(builder: (context) => const TransactionDetails()),
                     );
                   },
                   child: Text(

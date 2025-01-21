@@ -19,6 +19,7 @@ class SignIn extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              const SizedBox(height: 100,),
               const Text(
                 "Sign In",
                 style: TextStyle(
